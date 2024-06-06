@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #191c25;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  min-height: 500px;
+  gap: 40px;
+  padding: 25px;
+  background-color: #232532;
+  border-radius: 10px;
+  color: #fff;
+}
+.typing-info {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  text-align: center;
+  gap: 5px;
+}
+.typing-info span {
+  color: #ffffffc9;
+}
+.typing-info span span {
+  color: #7c4dff;
+}
+.sentence {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.user-input {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.user-input textarea {
+  border-radius: 5px;
+  background-color: #2c2d3f;
+  padding: 5px;
+  color: #fff;
+  resize: none;
+  outline: none;
+  font-size: 16px;
+}
+.user-input textarea::-webkit-scrollbar {
+   background-color: #191c25;
+   cursor: pointer;
+}
+.user-input textarea::-webkit-scrollbar-thumb {
+   background-color: #7c4dff;
+   cursor: pointer;
+}
+.user-input textarea::placeholder {
+  color: #fff;
+}
+.user-input button {
+  align-self: flex-end;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px;
+  border: 0;
+  background-color: #7c4dff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.user-input button:hover {
+  background-color: #6c3af8;
+}
+.user-input button:active {
+   transform: scale(0.9);
+}
+.user-input button.restart {
+  background-color: green;
+}
+
+/* Victory And Out Of Time Messages */
+
+.message {
+  position: absolute;
+  top: -100%;
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+  transition: 1s;
+}
+.message.victory {
+  background-color: #27ae60;
+  border: 2px solid #2ecc71;
+  text-align: center;
+}
+.message.victory::before {
+  content: "Congratulations!";
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.message.victory::after {
+  content: "You won! Great job!";
+  display: block;
+  font-size: 16px;
+}
+.message.time-up {
+  background-color: #e74c3c;
+  border: 2px solid #c0392b;
+}
+.message.time-up::before {
+  content: "Uh-oh!";
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.message.time-up::after {
+  content: "Time's up! You ran out of time!";
+  display: block;
+  font-size: 16px;
+}
+.visible {
+  top: 0;
+}
