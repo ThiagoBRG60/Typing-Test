@@ -45,6 +45,9 @@ body {
   flex-direction: column;
   gap: 40px;
 }
+.sentence p {
+  user-select: none;
+}
 .user-input {
   display: flex;
   flex-direction: column;
